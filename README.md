@@ -400,3 +400,16 @@ Pontos do mapa:
 - [IEN: reator nuclear de pesquisa Argonauta (exemplo do Swagger)](https://www.gov.br/ien/pt-br/instalacoes/reator-nuclear-de-pesquisa-argonauta)
 
 As coordenadas dos 11 pontos foram conferidas no [OpenStreetMap](https://www.openstreetmap.org) e gravadas com 4 casas decimais.
+
+
+## Como Docker e Cloud Computing podem ser utilizados na solução?
+
+Nesta solução, o Docker e a computação em nuvem são utilizados em conjunto para facilitar a implantação e a execução da API Expedição Átomo.
+
+O Docker permite empacotar a aplicação Java e suas dependências em uma imagem, garantindo que ela seja executada em um ambiente padronizado. Foi utilizado um Dockerfile com construção multi-stage: a primeira etapa utiliza Maven e Java 21 para compilar o projeto, enquanto a segunda utiliza apenas o ambiente JRE necessário para executar a aplicação. Isso reduz o tamanho da imagem final e separa o processo de compilação do ambiente de execução.
+
+A Cloud Computing, por meio do Microsoft Azure, disponibiliza a infraestrutura necessária para hospedar a aplicação sem depender de um computador local. Foi criada uma máquina virtual com Ubuntu Server, na qual o Docker foi instalado para executar o container da API.
+
+A aplicação é disponibilizada pela porta 8080 da máquina virtual, permitindo o acesso externo por meio de seu endereço IP público. A documentação e os endpoints podem ser acessados pelo Swagger, possibilitando testar as requisições HTTP remotamente.
+
+Dessa forma, a combinação dessas tecnologias proporciona maior portabilidade, facilidade de implantação, padronização do ambiente e disponibilidade da aplicação pela internet.
