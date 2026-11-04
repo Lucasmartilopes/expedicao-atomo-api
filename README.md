@@ -13,6 +13,7 @@ Grupo Expedição Átomo, 2TDSPS
 | Raphael Oliveira Sinelli Mendonça | 568346 |
 | Arthur Lins Belarmino | 566845 |
 | Henrique Spoltore Moreno Pavão dos Santos | 568130 |
+| Lucas Martinez Lopes | 553816 |
 
 ## O problema
 
